@@ -1,5 +1,16 @@
-<form method="POST">
-  {%csrf_token%}
-  did you want to delete the item??
-  <input type="submit">
-</form>
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="container mt-5">
+    <div class="alert alert-danger">
+      <form method="POST">
+        {%csrf_token%}
+        <h3 class="text-center">did you want to delete the item??</h3>
+        <div class="row justify-content-center">
+          <input type="submit" class="btn btn-info" value="Delete">
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock body %}
+  
